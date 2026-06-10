@@ -1,6 +1,10 @@
 <p align="right"><b>English</b> | <a href="./README.fr.md">Français</a></p>
 
 <p align="center">
+  <img src="logo.jpg" alt="LaTeX Forge Skill" width="420">
+</p>
+
+<p align="center">
   <b>Tell Claude what document you need. It scaffolds, writes, and compiles the LaTeX for you.</b>
 </p>
 

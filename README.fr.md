@@ -1,6 +1,10 @@
 <p align="right"><a href="./README.md">English</a> | <b>Français</b></p>
 
 <p align="center">
+  <img src="logo.jpg" alt="LaTeX Forge Skill" width="420">
+</p>
+
+<p align="center">
   <b>Décrivez le document dont vous avez besoin à Claude. Il génère, rédige et compile le LaTeX pour vous.</b>
 </p>
 
