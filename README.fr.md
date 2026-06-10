@@ -126,11 +126,9 @@ Les instructions complètes et le catalogue de templates sont dans
 
 ## Projets liés
 
-| Projet | Ce qu'il apporte |
-|---|---|
-| [**latex-forge**](https://github.com/thmsgo18/latex-forge) | La CLI pilotée par ce skill : génération, build, watch, export de projets LaTeX |
-| [**latex-forge-gallery**](https://github.com/thmsgo18/latex-forge-gallery) | La galerie de templates curée (80+) et son [site web](https://thmsgo18.github.io/latex-forge-gallery/) |
-| [**latex-forge-vscode**](https://github.com/thmsgo18/latex-forge-vscode) | L'extension VS Code compagnon : créer des projets et parcourir la galerie sans terminal |
+- [**latex-forge**](https://github.com/thmsgo18/latex-forge) : la CLI pilotée par ce skill : génération, build, watch, export de projets LaTeX
+- [**latex-forge-gallery**](https://github.com/thmsgo18/latex-forge-gallery) : la galerie de templates curée (80+) et son [site web](https://thmsgo18.github.io/latex-forge-gallery/)
+- [**latex-forge-vscode**](https://github.com/thmsgo18/latex-forge-vscode) : l'extension VS Code compagnon : créer des projets et parcourir la galerie sans terminal
 
 ## Auteur
 

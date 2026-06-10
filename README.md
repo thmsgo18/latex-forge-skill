@@ -123,11 +123,9 @@ The full instructions and template catalog live in
 
 ## Related projects
 
-| Project | What it adds |
-|---|---|
-| [**latex-forge**](https://github.com/thmsgo18/latex-forge) | The CLI this skill drives: scaffold, build, watch, export LaTeX projects |
-| [**latex-forge-gallery**](https://github.com/thmsgo18/latex-forge-gallery) | The curated template gallery (80+ templates) and its [browsable website](https://thmsgo18.github.io/latex-forge-gallery/) |
-| [**latex-forge-vscode**](https://github.com/thmsgo18/latex-forge-vscode) | The VS Code companion: create projects and browse the gallery without a terminal |
+- [**latex-forge**](https://github.com/thmsgo18/latex-forge): the CLI this skill drives: scaffold, build, watch, export LaTeX projects
+- [**latex-forge-gallery**](https://github.com/thmsgo18/latex-forge-gallery): the curated template gallery (80+ templates) and its [browsable website](https://thmsgo18.github.io/latex-forge-gallery/)
+- [**latex-forge-vscode**](https://github.com/thmsgo18/latex-forge-vscode): the VS Code companion: create projects and browse the gallery without a terminal
 
 ## Author
 
