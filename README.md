@@ -1,7 +1,7 @@
 <p align="right"><b>English</b> | <a href="./README.fr.md">Français</a></p>
 
 <p align="center">
-  <img src="logo.jpg" alt="LaTeX Forge Skill" width="420">
+  <img src="logo.png" alt="LaTeX Forge Skill" width="420">
 </p>
 
 <p align="center">
