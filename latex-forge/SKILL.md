@@ -131,6 +131,14 @@ interactive terminal.
 
 ## Step 7 - Write the content
 
+**Ground the report in its source material first.** A report documents real work, not
+imagination. If the user points you to a project — a code repository, a dataset,
+notes, an existing draft, a folder — read it thoroughly before writing, and base every
+factual claim, code excerpt, architecture description and result on what is actually
+there. If you are writing in-place inside an existing project, that surrounding project
+*is* the source. Where a needed result or figure isn't available, mark it with a
+`% TODO` rather than inventing it.
+
 Following the structure described in `AGENTS.md`:
 
 - one `.tex` file per section under `sections/`, `\input{}` from the main file

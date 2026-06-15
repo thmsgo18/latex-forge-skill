@@ -4,6 +4,13 @@ All notable changes to the LaTeX Forge skill will be documented in this file.
 
 ## [Unreleased]
 
+### Changed
+
+- `SKILL.md` Step 7 now tells Claude to ground the report in its source
+  material first: read the project it documents (code repository, dataset,
+  notes, draft, folder) before writing, and base every factual claim on
+  what is actually there rather than inventing it.
+
 ## [1.0.0] - 2026-06-11
 
 ### Added
