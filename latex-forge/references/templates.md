@@ -35,14 +35,14 @@ The `<category>` folder for each template is the leftmost column below.
 | `deedy-resume` | Two-column resume with a clean, professional layout | XeLaTeX |
 | `altacv` | CV with TikZ skill bars and timeline | LuaLaTeX |
 | `moderncv` | Highly customizable CV with multiple styles | pdfLaTeX |
-| `hipster-cv` | Colorful sidebar CV design | XeLaTeX |
+| `hipster-cv` | Colorful sidebar CV design | LuaLaTeX |
 | `twenty-seconds-cv` | Sidebar CV designed to be skimmed in 20 seconds | pdfLaTeX |
 | `developer-cv` | Academic CV with automatic BibTeX publication list | pdfLaTeX |
 | `sidebar-cv` | Modern CV with styled sidebar | pdfLaTeX |
 | `friggeri-cv` | Stylish A4 CV with colored section bars and BibTeX publications | XeLaTeX |
 | `resume-openfont` | Minimalist single-page resume using open-source fonts | pdfLaTeX |
 | `billryan-resume` | Elegant bilingual (English/Chinese) resume with FontAwesome | XeLaTeX |
-| `mcdowell-cv` | McDowell-style ATS-friendly CV | pdfLaTeX |
+| `mcdowell-cv` | McDowell-style ATS-friendly CV | XeLaTeX |
 | `rover-resume` | ATS-friendly resume with unique styling | pdfLaTeX |
 | `classic-cv` | Traditional single-column CV | pdfLaTeX |
 | `two-column-cv` | Two-column CV with photo and QR code | pdfLaTeX |
@@ -50,8 +50,8 @@ The `<category>` folder for each template is the leftmost column below.
 | `minimalist-cv` | Ultra-minimalist single-page CV | pdfLaTeX |
 | `modern-cv` | Modern CV with colored sidebar and skill bars | XeLaTeX |
 | `rows-cv` | Row-based CV layout with clean horizontal sections | XeLaTeX |
-| `sidebarleft-cv` | CV with left-aligned sidebar and icon-based contact info | XeLaTeX |
-| `infographics2-cv` | Second infographic-style CV with visual skill bars and timeline | XeLaTeX |
+| `sidebarleft-cv` | CV with left-aligned sidebar and icon-based contact info | LuaLaTeX |
+| `infographics2-cv` | Second infographic-style CV with visual skill bars and timeline | LuaLaTeX |
 | `cv-en` | English CV with FontAwesome icons (also built in) | LuaLaTeX |
 | `cv-fr` | French CV with FontAwesome icons (also built in) | LuaLaTeX |
 
@@ -88,7 +88,7 @@ The `<category>` folder for each template is the leftmost column below.
 |---|---|---|
 | `elegant-report` | Clean and elegant report with bibliography support | pdfLaTeX |
 | `technical-report` | Professional technical/term paper template | pdfLaTeX |
-| `internship-report` | UTBM-style internship report with professional formatting | pdfLaTeX |
+| `internship-report` | UTBM-style internship report with professional formatting | LuaLaTeX |
 | `project-report` | Academic project report with certificate pages | pdfLaTeX |
 | `math-notes` | Minimalist math notes with theorem environments | pdfLaTeX |
 | `elegant-notes` | Beautiful note-taking template with theorem environments | pdfLaTeX |
@@ -103,17 +103,17 @@ The `<category>` folder for each template is the leftmost column below.
 | Name | Description | Engine |
 |---|---|---|
 | `beamer-metropolis` | Modern, minimal Beamer theme | XeLaTeX |
-| `beamer-focus` | Minimalist Beamer theme with dark color scheme | pdfLaTeX |
+| `beamer-focus` | Minimalist Beamer theme with dark color scheme | LuaLaTeX |
 | `beamer-elegant` | Elegant Beamer slides with figure support | pdfLaTeX |
 | `beamer-corporate` | Professional Beamer slides with configurable colors | pdfLaTeX |
 | `beamer-simple` | Simple Beamer template focused on content | pdfLaTeX |
-| `beamer-auriga` | Dark-themed Beamer presentation with a modern, polished look | pdfLaTeX |
+| `beamer-auriga` | Dark-themed Beamer presentation with a modern, polished look | LuaLaTeX |
 
 ### letter
 
 | Name | Description | Engine |
 |---|---|---|
-| `cover-letter-modern` | Modern cover letter with clean typography | XeLaTeX |
+| `cover-letter-modern` | Modern cover letter with clean typography | LuaLaTeX |
 | `formal-letter` | Journal-style cover letter with professional formatting | pdfLaTeX |
 | `motivation-letter` | Motivation letter for academic and job applications | pdfLaTeX |
 | `moderncv-letter` | Cover letter using the moderncv class | pdfLaTeX |
@@ -123,9 +123,9 @@ The `<category>` folder for each template is the leftmost column below.
 | Name | Description | Engine |
 |---|---|---|
 | `beamerposter-landscape` | Landscape academic poster built with Beamer | pdfLaTeX |
-| `tikzposter` | Academic poster using TikZposter | pdfLaTeX |
+| `tikzposter` | Academic poster using TikZposter | XeLaTeX |
 | `academic-poster` | Gemini-themed academic conference poster | pdfLaTeX |
-| `gemini-poster` | Gemini beamerposter template with clean, modern design | pdfLaTeX |
+| `gemini-poster` | Gemini beamerposter template with clean, modern design | XeLaTeX |
 
 ### book
 
@@ -147,7 +147,7 @@ The `<category>` folder for each template is the leftmost column below.
 | `invoice-simple` | Clean single-page invoice template using the scrlttr2 class | pdfLaTeX |
 | `invoice-multipage` | Multi-page invoice template with itemized table and totals | pdfLaTeX |
 | `timesheet` | Monthly timesheet template with daily hours tracking table | pdfLaTeX |
-| `poem` | Elegant poem typesetting template with verse environments | pdfLaTeX |
+| `poem` | Elegant poem typesetting template with verse environments | XeLaTeX |
 
 ### project-upc — Projet Informatique L3 (Universite Paris Cite)
 
