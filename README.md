@@ -80,14 +80,14 @@ That's it — no configuration. The skill installs the `latex-forge` CLI itself
 ## Example
 
 ```
-You: I need a project report for my Master's, AFNOR/ISO style, in French.
-     Title is "Plateforme de gestion documentaire collaborative", three
-     authors: me, Alice Martin and Baptiste Durand, supervised by
-     Pr. Sophie Lefebvre. Here are my notes on the architecture and tests: ...
+You: I need a project report for the migration we just shipped at work.
+     Title is "Migrating the Order Service to Kubernetes", two authors:
+     me and Jordan Reyes, reviewed by our tech lead Priya Shah. Here are
+     my notes on the architecture and the rollout: ...
 
-Claude: [creates the project from project-report-fr, fills in
+Claude: [creates the project from project-report-en, fills in
         frontmatter/metadata.tex, writes sections/architecture.tex and
-        sections/tests.tex from your notes, compiles, and reports any
+        sections/rollout.tex from your notes, compiles, and reports any
         LaTeX errors]
 ```
 

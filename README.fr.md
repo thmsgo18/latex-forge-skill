@@ -82,15 +82,15 @@ C'est tout, aucune configuration nécessaire. Le skill installe lui-même la CLI
 ## Exemple
 
 ```
-Vous : J'ai besoin d'un rapport de projet pour mon Master, style AFNOR/ISO,
-       en français. Le titre est "Plateforme de gestion documentaire
-       collaborative", trois auteurs : moi, Alice Martin et Baptiste Durand,
-       encadrés par la Pr. Sophie Lefebvre. Voici mes notes sur
-       l'architecture et les tests : ...
+Vous : J'ai besoin d'un rapport de projet pour la migration qu'on vient de
+       livrer au travail. Le titre est "Migration du service de commandes
+       vers Kubernetes", deux auteurs : moi et Jordan Reyes, relu par notre
+       lead technique Priya Shah. Voici mes notes sur l'architecture et le
+       déploiement : ...
 
 Claude : [crée le projet à partir de project-report-fr, remplit
          frontmatter/metadata.tex, rédige sections/architecture.tex et
-         sections/tests.tex à partir de vos notes, compile et signale
+         sections/deploiement.tex à partir de vos notes, compile et signale
          les éventuelles erreurs LaTeX]
 ```
 
