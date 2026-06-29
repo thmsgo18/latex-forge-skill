@@ -46,19 +46,13 @@ a folder with a `SKILL.md` that Claude loads automatically when relevant.
 **Personal skill** (available in every project):
 
 ```bash
-git clone https://github.com/thmsgo18/latex-forge-skill.git /tmp/latex-forge-skill
-mkdir -p ~/.claude/skills
-cp -r /tmp/latex-forge-skill/latex-forge ~/.claude/skills/
-rm -rf /tmp/latex-forge-skill
+git clone https://github.com/thmsgo18/latex-forge-skill.git ~/.claude/skills/latex-forge
 ```
 
 **Project skill** (only for the current repository):
 
 ```bash
-git clone https://github.com/thmsgo18/latex-forge-skill.git /tmp/latex-forge-skill
-mkdir -p .claude/skills
-cp -r /tmp/latex-forge-skill/latex-forge .claude/skills/
-rm -rf /tmp/latex-forge-skill
+git clone https://github.com/thmsgo18/latex-forge-skill.git .claude/skills/latex-forge
 ```
 
 That's it — no configuration. The skill installs the `latex-forge` CLI itself
@@ -110,8 +104,7 @@ Claude: [creates the project from project-report-fr, fills in
 7. `latex-forge export` for a clean, submission-ready ZIP
 
 The full instructions and template catalog live in
-[`latex-forge/SKILL.md`](latex-forge/SKILL.md) and
-[`latex-forge/references/`](latex-forge/references/).
+[`SKILL.md`](SKILL.md) and [`references/`](references/).
 
 ## Requirements
 

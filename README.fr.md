@@ -47,19 +47,13 @@ automatiquement quand c'est pertinent.
 **Skill personnel** (disponible dans tous vos projets) :
 
 ```bash
-git clone https://github.com/thmsgo18/latex-forge-skill.git /tmp/latex-forge-skill
-mkdir -p ~/.claude/skills
-cp -r /tmp/latex-forge-skill/latex-forge ~/.claude/skills/
-rm -rf /tmp/latex-forge-skill
+git clone https://github.com/thmsgo18/latex-forge-skill.git ~/.claude/skills/latex-forge
 ```
 
 **Skill de projet** (uniquement pour le dépôt courant) :
 
 ```bash
-git clone https://github.com/thmsgo18/latex-forge-skill.git /tmp/latex-forge-skill
-mkdir -p .claude/skills
-cp -r /tmp/latex-forge-skill/latex-forge .claude/skills/
-rm -rf /tmp/latex-forge-skill
+git clone https://github.com/thmsgo18/latex-forge-skill.git .claude/skills/latex-forge
 ```
 
 C'est tout, aucune configuration nécessaire. Le skill installe lui-même la CLI
@@ -113,8 +107,7 @@ Claude : [crée le projet à partir de project-report-fr, remplit
 7. `latex-forge export` pour une archive propre, prête à rendre
 
 Les instructions complètes et le catalogue de templates sont dans
-[`latex-forge/SKILL.md`](latex-forge/SKILL.md) et
-[`latex-forge/references/`](latex-forge/references/).
+[`SKILL.md`](SKILL.md) et [`references/`](references/).
 
 ## Prérequis
 

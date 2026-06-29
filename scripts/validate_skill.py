@@ -2,15 +2,16 @@
 """Validate the structure of the latex-forge Claude skill.
 
 Checks that SKILL.md exists, has well-formed frontmatter (name matching the
-skill folder, non-empty description within Claude's length limit), and that
-every local file referenced from SKILL.md actually exists.
+expected skill name, non-empty description within Claude's length limit),
+and that every local file referenced from SKILL.md actually exists.
 """
 
 import re
 import sys
 from pathlib import Path
 
-SKILL_DIR = Path(__file__).resolve().parent.parent / "latex-forge"
+SKILL_DIR = Path(__file__).resolve().parent.parent
+SKILL_NAME = "latex-forge"
 MAX_DESCRIPTION_LENGTH = 1024
 
 errors = []
@@ -30,10 +31,10 @@ else:
         name_match = re.search(r"^name:\s*(\S+)\s*$", frontmatter, re.MULTILINE)
         if not name_match:
             errors.append("SKILL.md: frontmatter has no 'name' field")
-        elif name_match.group(1) != SKILL_DIR.name:
+        elif name_match.group(1) != SKILL_NAME:
             errors.append(
                 f"SKILL.md: name '{name_match.group(1)}' does not match "
-                f"folder name '{SKILL_DIR.name}'"
+                f"expected skill name '{SKILL_NAME}'"
             )
 
         desc_match = re.search(r"^description:\s*(.+)$", frontmatter, re.MULTILINE)

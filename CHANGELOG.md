@@ -6,6 +6,10 @@ All notable changes to the LaTeX Forge skill will be documented in this file.
 
 ### Changed
 
+- Moved `SKILL.md` and `references/` from the `latex-forge/` subfolder to
+  the repository root, so the skill can be installed with a single
+  `git clone` straight into `~/.claude/skills/latex-forge` instead of a
+  clone-then-copy dance.
 - `SKILL.md` Step 7 now tells Claude to ground the report in its source
   material first: read the project it documents (code repository, dataset,
   notes, draft, folder) before writing, and base every factual claim on
