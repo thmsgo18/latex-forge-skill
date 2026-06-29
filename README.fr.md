@@ -82,11 +82,11 @@ C'est tout, aucune configuration nécessaire. Le skill installe lui-même la CLI
 ## Exemple
 
 ```
-Vous : J'ai besoin d'un rapport de projet pour la migration qu'on vient de
-       livrer au travail. Le titre est "Migration du service de commandes
-       vers Kubernetes", deux auteurs : moi et Jordan Reyes, relu par notre
-       lead technique Priya Shah. Voici mes notes sur l'architecture et le
-       déploiement : ...
+Vous : /latex-forge J'ai besoin d'un rapport de projet pour la migration
+       qu'on vient de livrer au travail. Le titre est "Migration du
+       service de commandes vers Kubernetes", deux auteurs : moi et
+       Jordan Reyes, relu par notre lead technique Priya Shah. Voici mes
+       notes sur l'architecture et le déploiement : ...
 
 Claude : [crée le projet à partir de project-report-fr, remplit
          frontmatter/metadata.tex, rédige sections/architecture.tex et

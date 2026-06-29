@@ -80,10 +80,11 @@ That's it — no configuration. The skill installs the `latex-forge` CLI itself
 ## Example
 
 ```
-You: I need a project report for the migration we just shipped at work.
-     Title is "Migrating the Order Service to Kubernetes", two authors:
-     me and Jordan Reyes, reviewed by our tech lead Priya Shah. Here are
-     my notes on the architecture and the rollout: ...
+You: /latex-forge I need a project report for the migration we just
+     shipped at work. Title is "Migrating the Order Service to
+     Kubernetes", two authors: me and Jordan Reyes, reviewed by our tech
+     lead Priya Shah. Here are my notes on the architecture and the
+     rollout: ...
 
 Claude: [creates the project from project-report-en, fills in
         frontmatter/metadata.tex, writes sections/architecture.tex and
