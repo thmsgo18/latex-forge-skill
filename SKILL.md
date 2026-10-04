@@ -22,17 +22,18 @@ latex-forge --version
 ```
 
 If the command is not found, install it without asking (it is a small, reversible,
-user-level Python package):
+user-level tool — no admin rights, no Python needed beforehand):
 
 ```bash
-command -v pipx >/dev/null 2>&1 || python3 -m pip install --user pipx
-pipx ensurepath
-pipx install latex-forge
+# Installs uv if needed (it brings its own Python), then latex-forge.
+# LATEX_FORGE_TEX=none: LaTeX itself is handled in Step 2.
+curl -LsSf https://raw.githubusercontent.com/thmsgo18/latex-forge/main/install.sh | LATEX_FORGE_TEX=none sh
 ```
 
-If `latex-forge` is still not on `PATH` after install, call it via
-`~/.local/bin/latex-forge` (or `pipx run latex-forge ...`) for the rest of the
-session, or open a new shell.
+On Windows (PowerShell): `$env:LATEX_FORGE_TEX='none'; irm https://raw.githubusercontent.com/thmsgo18/latex-forge/main/install.ps1 | iex`.
+If uv or pipx is already set up, `uv tool install latex-forge` / `pipx install latex-forge` work too. If
+`latex-forge` is still not on `PATH` after install, call it via
+`~/.local/bin/latex-forge` for the rest of the session, or open a new shell.
 
 ## Step 2 - Check the LaTeX toolchain
 
@@ -41,12 +42,22 @@ latex-forge diagnose --json
 ```
 
 This reports whether a TeX distribution (pdflatex/xelatex/lualatex), `latexmk`
-and `biber` are available. If the toolchain is missing, **ask the user before**
-running the heavy installer (it downloads a full TeX distribution):
+and `biber` are available (`texlive.ok` and `latexmk.ok`), which distribution it
+is (`tex_distribution.label`) and whether missing LaTeX packages can be
+installed automatically (`tex_distribution.can_install_packages`). TeX is found
+even when it isn't on PATH, so trust this rather than `which lualatex`.
+
+If the toolchain is missing, **ask the user before** installing it. The default
+is light (TinyTeX in the home folder, ~500 MB, a few minutes, no admin password);
+offer `--tex full` (all of TeX Live, ~2 GB) if they want everything offline:
 
 ```bash
-latex-forge setup --install-tex
+latex-forge setup --install-tex --yes --skip-extensions
 ```
+
+It ends with a test compile; exit code 0 means LaTeX works. Never run
+`--tex system` yourself: it needs the user's administrator password in a
+terminal.
 
 If the user just wants the project files (no local compilation), you can skip
 this step entirely.
@@ -87,7 +98,7 @@ local folder with a `main.tex` at its root) — see
 Use the non-interactive form so it works from a script:
 
 ```bash
-latex-forge create --name <project-name> --template <template> --output <dir> [--git]
+latex-forge create --name <project-name> --template <template> --output <dir> --repo none
 ```
 
 - `<project-name>`: kebab-case, derive it from the document's subject if the
@@ -95,7 +106,13 @@ latex-forge create --name <project-name> --template <template> --output <dir> [-
 - `<template>`: a built-in name or the name used at install time for a gallery
   template.
 - `--output`: ask where to put it if unclear (defaults to the current directory).
-- `--git`: pass it if the user wants version control from the start.
+- `--repo`: `none` (default), `existing` if the folder already lives inside a
+  git repository, or `create` to also create a new GitHub repository (needs the
+  GitHub CLI, authenticated — ask the user first, and add `--repo-name` and
+  `--visibility private|public`). With `create`/`existing`, `--sharing
+  full|pdf-only` sets what the `.gitignore` tracks.
+- On a light TinyTeX, `create` also installs the LaTeX packages the template
+  needs (a few seconds to a minute); `--skip-packages` skips that when offline.
 
 ## Step 5 - Read `AGENTS.md` first, before touching anything
 
@@ -158,8 +175,11 @@ latex-forge build --verbose  # full latexmk output
 latex-forge watch            # recompile on every save
 ```
 
-`latex-forge build` already auto-installs missing LaTeX packages via `tlmgr`
-when possible. If compilation still fails, read `build/<name>.log`, fix the
+`latex-forge build` already installs missing LaTeX packages, fonts and
+bibliography styles via `tlmgr` and recompiles, whenever the distribution allows
+it (the light TinyTeX does). With a system-wide TeX Live it prints the
+`sudo tlmgr install ...` command instead: relay it to the user rather than running
+sudo yourself. If compilation still fails, read `build/<name>.log`, fix the
 `.tex` source, and rebuild. Cross-check unexpected errors against the "Common
 errors and fixes" table in `AGENTS.md`.
 

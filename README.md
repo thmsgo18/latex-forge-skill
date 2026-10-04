@@ -56,7 +56,8 @@ git clone https://github.com/thmsgo18/latex-forge-skill.git .claude/skills/latex
 ```
 
 That's it — no configuration. The skill installs the `latex-forge` CLI itself
-(via `pipx`) the first time it's needed.
+the first time it's needed (through uv, which brings its own Python — no admin
+rights needed).
 
 ## What it does
 
@@ -94,8 +95,8 @@ Claude: [creates the project from project-report-en, fills in
 
 ## How it works
 
-1. Make sure the `latex-forge` CLI is installed (`pipx install latex-forge`
-   if missing)
+1. Make sure the `latex-forge` CLI is installed (installs it with uv if
+   missing) and, with your OK, LaTeX (`latex-forge setup --install-tex`)
 2. Pick a template — built in, or installed from the
    [gallery](https://github.com/thmsgo18/latex-forge-gallery)
 3. `latex-forge create --name ... --template ... --output ...`
@@ -111,10 +112,10 @@ The full instructions and template catalog live in
 
 - [Claude Code](https://docs.claude.com/en/docs/claude-code) (or any Claude
   client that supports skills)
-- Python 3.10+ and [pipx](https://pipx.pypa.io) (the skill installs
-  `latex-forge` for you if missing)
+- Nothing else: the skill installs `latex-forge` for you if missing (no
+  Python or pipx needed beforehand)
 - A LaTeX distribution to compile locally — `latex-forge setup --install-tex`
-  installs one if needed
+  installs a light one in your home folder (~500 MB, no admin rights) if needed
 
 ## Related projects
 

@@ -6,8 +6,8 @@ Full reference for the [`latex-forge`](https://github.com/thmsgo18/latex-forge) 
 
 | Command | Description |
 |---|---|
-| `latex-forge create --name N --template T --output DIR [--git]` | Create a project. All flags optional; omitted ones are prompted interactively (avoid that from a script — always pass `--name` and `--template`). `--git` runs `git init` with an initial commit. |
-| `latex-forge build [DIR] [--clean] [--verbose]` | Compile to PDF with `latexmk`. Auto-installs missing LaTeX packages via `tlmgr` when possible. `--clean` removes `build/` first. `--verbose` shows full `latexmk` output (default: errors only). |
+| `latex-forge create --name N --template T --output DIR [--repo create\|existing\|none] [--repo-name R] [--visibility private\|public] [--sharing full\|pdf-only] [--build-before-commit] [--skip-packages]` | Create a project. All flags optional; omitted ones are prompted interactively (avoid that from a script — always pass `--name`, `--template` and `--repo`). `--repo create` initializes git and creates a GitHub repository via `gh`; `existing` leaves git alone (folder already versioned); `none` (default) stays local. On a light TinyTeX, the template's LaTeX packages are installed right away unless `--skip-packages`. |
+| `latex-forge build [DIR] [--clean] [--verbose]` | Compile to PDF with `latexmk`. Installs missing LaTeX packages, fonts and bibliography styles via `tlmgr` and recompiles, when the distribution allows it (TinyTeX); otherwise prints the `sudo tlmgr install` command. `--clean` removes `build/` first. `--verbose` shows full `latexmk` output (default: errors only). |
 | `latex-forge watch [DIR] [--verbose]` | Recompile on every save (`latexmk -pvc`). Long-running — only use it if the user explicitly wants continuous compilation, and run it in the background. |
 | `latex-forge export [DIR] [--output FILE]` | Bundle sources + compiled PDF into a ZIP for submission. Default output: `<project>-export.zip` next to the project. |
 | `latex-forge rename [OLD] NEW` | Rename a project: folder, main `.tex` file, and build artifacts. Run from the parent directory with both names, or from inside the project with just the new name. |
@@ -41,8 +41,8 @@ installs and compiles, just without auto-fill.
 
 | Command | Description |
 |---|---|
-| `latex-forge setup [--check-only] [--skip-extensions] [--install-tex]` | Check/set up the environment: VS Code extensions and LaTeX toolchain. `--install-tex` installs a full TeX distribution for the current OS — slow, ask the user before running it. |
-| `latex-forge diagnose [--json]` | Health check: latex-forge version, pipx, TeX Live (engines + version), `latexmk`, `biber`, profile, defaults. Use `--json` to parse programmatically. |
+| `latex-forge setup [--check-only] [--skip-extensions] [--install-tex] [--tex light\|full\|system] [--yes] [--verify]` | Check/set up the environment: LaTeX toolchain and VS Code extensions. `--install-tex` installs LaTeX if missing: `light` (default) = TinyTeX in the home folder, ~500 MB, no admin rights, packages added on demand; `full` = all of TeX Live, ~2 GB; `system` = package manager, needs the user's admin password in a terminal (never run it yourself). Ask the user before installing. `--yes` never prompts; `--verify` compiles a test document. Also `--reinstall-tex` (after a new TeX Live year) and `--remove-tex`. |
+| `latex-forge diagnose [--json]` | Health check: latex-forge version and how it's installed (`cli_install`), the LaTeX distribution (`tex_distribution`: kind, label, location, `can_install_packages`), engines, `latexmk`, `biber`, GitHub CLI, profile, defaults. Exit code 1 if LaTeX or latexmk is missing. Use `--json` to parse programmatically. |
 | `latex-forge completion [--shell SHELL]` | Print shell completion code for bash/zsh/fish. |
 | `latex-forge --version` | Show the installed CLI version. |
 
