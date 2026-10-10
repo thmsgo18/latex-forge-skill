@@ -38,6 +38,10 @@ It does not duplicate the LaTeX Forge ecosystem: it teaches Claude how to use
 the `latex-forge` CLI, how to pick a template from the 80+ available, and how
 to follow each generated project's own `AGENTS.md` briefing.
 
+## See it in action
+
+https://github.com/user-attachments/assets/24b4b492-e271-4a96-a629-db1df27909cb
+
 ## Install
 
 This is a plain [Claude Code skill](https://docs.claude.com/en/docs/claude-code/skills):
