@@ -38,6 +38,10 @@ Ce skill ne duplique pas l'écosystème LaTeX Forge : il apprend à Claude à
 utiliser la CLI `latex-forge`, à choisir un template parmi les 80+
 disponibles, et à suivre le fichier `AGENTS.md` propre à chaque projet généré.
 
+## L'extension en action
+
+https://github.com/user-attachments/assets/24b4b492-e271-4a96-a629-db1df27909cb
+
 ## Installation
 
 C'est un [skill Claude Code](https://docs.claude.com/en/docs/claude-code/skills)
